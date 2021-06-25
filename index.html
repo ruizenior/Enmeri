@@ -1,86 +1,236 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta charset='UTF-8'>
-<meta name="robots" content="noindex">
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
-
-<script src="https://use.typekit.net/hoy3lrg.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'><link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
-
-<link rel="stylesheet" href="./package/bootstrap-5.0.1-dist/css/bootstrap.rtl.min.css">
-<link rel="stylesheet" href="./mycss/consultorio.css">
-<title>ENMERI Cosultorio</title>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./package/bootstrap-5.0.1-dist/css/bootstrap.rtl.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!-- Hoja de estilo perzonalizada -->
+    <link rel="stylesheet" href="./mycss/chats.css">
+    <title>ENMERI</title>
+    <link rel="shortcut icon" href="./img/ENMERI-icon.png">
 </head>
-
 <body>
-    <div id="frame">
-            
+    <div id="wraper">
         <div id="sidepanel">
-            <h1>Hello mtfs</h1>
-<!-- 
-                <div class="row">
-                    <div class="datosUsuario">
-                        <div class="wrap">
-                            <img id="profile-img" src="./img/user.png" class="online" alt="" />
-                            <p>Nombre de usuario</p>
-                            <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
-                            
-                            <div class="estados"></div>
-                            <div class="redes-expandido"></div>
+			<div id="profile">
+                <div id="infouser-img">
+                    <img  id="inf-img" src="./img/user.png" class="online" alt="" />
+                </div>
+                
+                <div id="infouser-name">
+                    <h4 class="username">Nombre de usuario </h4>
+                </div>
+                
+                <div id="icon-down">
+                    <i id="icon" class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+                </div>
+
+                <!-- <div id="expanded">
+                    <ul>
+                        <li id="status-online" class="active"><span class="status-circle"></span> <p>Disponible</p></li>
+                        <li id="status-away"><span class="status-circle"></span> <p>No disponible</p></li>
+                        <li id="status-busy"><span class="status-circle"></span> <p>En consulta</p></li>
+                        <li id="status-offline"><span class="status-circle"></span> <p>Desconectado</p></li>
+                    </ul>
+                </div> -->
+			</div>
+            <div id="search">
+                <div id='s-input'>
+                    <input type="text" name="txt-search" id="txt-search" placeholder="buscar">
+                </div>
+                <a href="" id='s-btn'>
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="" id='filter-btn'>
+                    <i class="fas fa-align-left"></i>
+                </a>
+            </div>
+            <div id="chats">
+                <?php
+                    for ($x=0;$x<6;$x++){
+                ?>
+                <div class="chat">
+                    <div class="img-chat">
+                        <img src="./img/user.png" alt="" class="img-xs img-round">
+                    </div>
+                    <div class="dm">
+                        <div class="username">
+                            <h6>
+                                Nombre de usuario
+                            </h6>
+                        </div>
+                        <div class="last-dm">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ab quisquam quos!</p>
                         </div>
                     </div>
+                    <div class="date">12:55</div>
                 </div>
-
-
-                <div class="row">
-                    <div class="top-barr">
-                        <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
-                        <input type="text" placeholder="Search contacts..." />
+                <?php }?>
+            </div>
+            <div id="menubar">
+                <a href="" id="btn1">
+                    <div class="img-btn-menu">
+                        <img class="img-xs img-menu" src="./img/guardados.png" alt="">
                     </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="usuarios">
-                        <ul>
-                            <li class="usuario">
-                                <div class="wrap">
-                                    <span></span>
-                                    <img src="" alt="">
-                                    <div class="meta">
-                                        <p class="nombre">Ususario 1</p>
-                                        <p class="previsualizacion">Ultimo mensaje</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                    <div class="lbl-btn-menu">
+                        <p>GUARDADOS</p>
                     </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="botton-barr">
+                </a>
+                
+                <a href="" id="btn2">
+                    <div class="img-btn-menu">
+                        <img class="img-Xs img-menu" src="./img/chats.png" alt="">
                     </div>
-                </div> -->
-
+                    <div class="lbl-btn-menu">
+                        <p>CHATS</p>
+                    </div>
+                </a>
+                
+                <a href="" id="btn3">
+                    <div class="img-btn-menu">
+                        <img class="img-Xs img-menu" src="./img/config.png" alt="">
+                    </div>
+                    <div class="lbl-btn-menu">
+                        <p>CONFIG</p>
+                    </div>
+                </a>
+            </div>
         </div>
 
-        <div class="contenido">
-            
-        </div>
+        <div id="content">
+            <div id="header-chat">
+                <div id="btn-back">
+                    <button type="button" id="sidepanelCollapseOut" class="own-btn own-btn-light">
+                        <i class="fas fa-chevron-left"></i>
+                        <span></span>
+                    </button>
+                </div>
 
+                <div id="img-user-chat">
+                    <a href="#">
+                        <img src="./img/user.png" alt="" class="img-s img-round">
+                    </a>
+                </div>
+
+                <div id="username-chat">
+                    <h5>Nombre de usuario</h5>
+                </div>
+
+                <a href="#" id="btn-options">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+
+            <div id="content-chat">
+            </div>
+
+            <div  id="sendbar-chat">
+                <a href="#" id="add-btn">
+                    <i class="fas fa-plus"></i>
+                </a>
+                <div id="input-dm">
+                    <input type="text" id="txt-dm">
+                </div>
+                <a href="#" id="send-btn">
+                    <i class="fas fa-caret-up"></i>
+                </a>
+            </div>
+        </div>
     </div>
 
 
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
+    <script>
+        $(document).ready(function () {
+            $('#sidepanelCollapseIn').on('click', function () {
+                $('#sidepanel').toggleClass('active');
+                $('#content').toggleClass('active');
+            });
+        });
+        $(document).ready(function () {
+            $('#sidepanelCollapseOut').on('click', function () {
+                $('#sidepanel').toggleClass('active');
+                $('#content').toggleClass('active');
+                
+            });
+        });
+        $(document).ready(function () {
+            if (screen.width <= 700){
+                $('.chat').on('click', function () {
+                    $('#sidepanel').toggleClass('active');
+                    $('#content').toggleClass('active');
+                });
+            };
+        });
+    </script>
+    
+	<script >
+		$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+
+		$("#profile-img").click(function() {
+			$("#status-options").toggleClass("active");
+		});
+
+		$(".expand-button").click(function() {
+		$("#profile").toggleClass("expanded");
+			$("#contacts").toggleClass("expanded");
+		});
+
+		$("#status-options ul li").click(function() {
+			$("#profile-img").removeClass();
+			$("#status-online").removeClass("active");
+			$("#status-away").removeClass("active");
+			$("#status-busy").removeClass("active");
+			$("#status-offline").removeClass("active");
+			$(this).addClass("active");
+			
+			if($("#status-online").hasClass("active")) {
+				$("#profile-img").addClass("online");
+			} else if ($("#status-away").hasClass("active")) {
+				$("#profile-img").addClass("away");
+			} else if ($("#status-busy").hasClass("active")) {
+				$("#profile-img").addClass("busy");
+			} else if ($("#status-offline").hasClass("active")) {
+				$("#profile-img").addClass("offline");
+			} else {
+				$("#profile-img").removeClass();
+			};
+			
+			$("#status-options").removeClass("active");
+		});
+
+		function newMessage() {
+			message = $(".message-input input").val();
+			if($.trim(message) == '') {
+				return false;
+			}
+			$('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
+			$('.message-input input').val(null);
+			$('.contact.active .preview').html('<span>You: </span>' + message);
+			$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+		};
+
+		$('.submit').click(function() {
+		newMessage();
+		});
+
+		$(window).on('keydown', function(e) {
+		if (e.which == 13) {
+			newMessage();
+			return false;
+		}
+		});
+		//# sourceURL=pen.js
+	</script>
 
 </body>
 </html>

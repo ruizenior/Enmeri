@@ -18,13 +18,13 @@ a[data-toggle="collapse"] {
     position: relative;
 }
 
-/* .dropdown-toggle::after {
+.dropdown-toggle::after {
     display: block;
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-} */
+}
 
 /* @media (max-width: 768px) {
     #sidebar {
@@ -59,11 +59,11 @@ a, a:hover, a:focus {
 }
 
 #sidebar {
-    /* don't forget to add all the previously mentioned styles here too */
+    don't forget to add all the previously mentioned styles here too
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
-}
+}*/
 
 #sidebar .sidebar-header {
     padding: 20px;
