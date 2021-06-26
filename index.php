@@ -23,31 +23,25 @@
                 <div id="infouser-img">
                     <img  id="inf-img" src="./img/user.png" class="online" alt="" />
                 </div>
-                
+
                 <div id="infouser-name">
                     <h4 class="username">Nombre de usuario </h4>
                 </div>
-                
+
                 <div id="icon-down">
                     <i id="icon" class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
                 </div>
 
-                <!-- <div id="expanded">
-                    <ul>
-                        <li id="status-online" class="active"><span class="status-circle"></span> <p>Disponible</p></li>
-                        <li id="status-away"><span class="status-circle"></span> <p>No disponible</p></li>
-                        <li id="status-busy"><span class="status-circle"></span> <p>En consulta</p></li>
-                        <li id="status-offline"><span class="status-circle"></span> <p>Desconectado</p></li>
-                    </ul>
-                </div> -->
 			</div>
             <div id="search">
                 <div id='s-input'>
                     <input type="text" name="txt-search" id="txt-search" placeholder="buscar">
                 </div>
+
                 <a href="" id='s-btn'>
                     <i class="fas fa-search"></i>
                 </a>
+
                 <a href="" id='filter-btn'>
                     <i class="fas fa-align-left"></i>
                 </a>
@@ -129,6 +123,25 @@
             </div>
 
             <div id="content-chat">
+                <div class="dm-sent">
+                    <div class="wrap-dm">
+                        <div class="date-dm">18:01</div>
+                        <div class="txt-dm">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo ratione, ad quasi tenetur facere ea iste itaque sit neque, maxime totam vel dignissimos consequuntur voluptates quia laudantium recusandae, qui eos!.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dm-received">
+                    <div class="wrap-dm ">
+                        <div class="txt-dm">
+                            <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatem est aut ea unde officiis earum maiores quod ipsam quas in ab nisi pariatur natus veniam excepturi voluptates facilis necessitatibus, assumenda error dolorem possimus ducimus doloremque explicabo! Aspernatur, distinctio necessitatibus quam id harum similique, repellendus ad eius ratione totam tempora. -->
+                            <p>hola</p>
+                        </div>
+                        <div class="date-dm">
+                            <p>19:31</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div  id="sendbar-chat">

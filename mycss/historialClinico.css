@@ -1,0 +1,38 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#wraper{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+    /* display: flex;
+    align-items: stretch; */
+}
+
+#header{
+    width: 100%;
+    height: 80px;
+    background-color: palevioletred;
+    overflow: hidden;
+    padding-bottom: 0px;
+    padding-top: 40px;
+}
+#slide{
+    width: 100%;
+    /* height: 80px; */
+    background-color: aqua;
+    /* display: inline-block; */
+}
+#body{
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    background-color: peru;
+    border: 1px white solid;
+}
+#body #body-form{
+    width: 100%;
+    height: 80%;
+    background-color: #a02929;
+}
