@@ -1,0 +1,65 @@
+<!-- Define que el documento esta bajo el estandar de HTML 5 -->
+<!doctype html>
+
+<!-- Representa la raíz de un documento HTML o XHTML. Todos los demás elementos deben ser descendientes de este elemento. -->
+<html lang="es">
+    
+    <head>
+        
+        <meta charset="utf-8">
+        
+        <title> ENMERI </title>    
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="../img/ENMERI-icon.png">
+        <meta name="description" content="ENMERI">
+        <meta name="keywords" content="Formulario Acceso ENMERI, Formulario de Login">
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+        
+        <!-- Link hacia el archivo de estilos css -->
+        <link rel="stylesheet" href="../mycss/login.css">
+        <link rel="stylesheet" href="../package/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <!-- Link hacia el archivo de bootstrap-->
+        <script src="../package/bootstrap-5.0.1-dist/css/bootstrap.min.css"></script>
+        <!-- jquery  -->
+        <script src="../js/jquery-3.5.1.min.js"></script>
+        <style>
+        </style>
+        
+        <script type="text/javascript">
+        
+        </script>
+        
+    </head>
+    
+    <body>
+        
+        <div id="contenedor">
+            <div id="central">
+                <div id="login">
+                    <div class="titulo">
+                        <img class="imglogin" src="../img/ENMERI-logologin.svg" alt="ENMERI" >
+                    </div>
+
+                    <form id="loginform">
+                        <input type="text" name="usuario" placeholder="Usuario" required>
+                        
+                        <input type="password" placeholder="Contraseña" name="password" required>
+                        
+                        <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+                    </form>
+                    <div class="pie-form">
+                        <a href="./contraseña.html">¿Perdiste tu contraseña?</a>
+                        <a href="./registro.html">¿No tienes Cuenta? Registrate</a>
+                    </div>
+                </div>
+                <!-- <div class="inferior">
+                    <a href="#">Volver</a>
+                </div> -->
+            </div>
+        </div>
+            
+    </body>
+</html>
