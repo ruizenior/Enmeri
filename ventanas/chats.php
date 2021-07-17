@@ -1,3 +1,10 @@
+<?php
+    include_once('../php/header.php');
+    // echo( $_SESSION['userTipe']);
+    // echo($row['nombres']);
+?>
+
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -8,31 +15,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./package/bootstrap-5.0.1-dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../package/bootstrap-5.0.1-dist/css/bootstrap.rtl.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     <!-- Hoja de estilo perzonalizada -->
-    <link rel="stylesheet" href="./mycss/chats.css">
+    <link rel="stylesheet" href="../mycss/chats.css">
     <title>ENMERI</title>
-    <link rel="shortcut icon" href="./img/ENMERI-icon.png">
+    <link rel="shortcut icon" href="../img/ENMERI-icon.png">
 </head>
 <body>
     <div id="wraper">
         <div id="sidepanel">
-			<div id="profile">
+            <div id="profile">
                 <div id="infouser-img">
-                    <img  id="inf-img" src="./img/user.png" class="online" alt="" />
+                        <img  id="inf-img" src="../img/user.png" class="online" alt="" />
                 </div>
 
                 <div id="infouser-name">
-                    <h4 class="username">Nombre de usuario </h4>
+                    <?php
+                        if(isset($_SESSION['userid'])){
+                            ?>
+                            <h4 class="username"><?php echo($row['nombres'] . ' ' . $row['apellidos']);?></h4>
+                            <?php
+                        }else{
+                            ?>
+                            <h4 class="username">Nombre de usuario </h4>
+                            <?php
+                        }
+                    ?>
                 </div>
 
-                <div id="icon-down">
-                    <i id="icon" class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+                <div id="icon-down" class="">
+                    <button id="btn-menu-conexion" class="own-btn own-btn-light">
+                        <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+                    </button>
                 </div>
 
+                <div id="menu-conexion" class="">
+                    <ul>
+                        <li class="">
+                            Activo
+                        </li>
+                        <li class="">
+                            No disponible
+                        </li>
+                        <li class="">
+                            Desconectado
+                        </li>
+                        <a  href="../php/cerrar.php">
+                            <li class="botton">
+                                <i class="fas fa-sign-out-alt i"></i> <span> Cerrar secion</span>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
 			</div>
+
             <div id="search">
                 <div id='s-input'>
                     <input type="text" name="txt-search" id="txt-search" placeholder="buscar">
@@ -46,13 +84,14 @@
                     <i class="fas fa-align-left"></i>
                 </a>
             </div>
+
             <div id="chats">
                 <?php
                     for ($x=0;$x<4;$x++){
                 ?>
                 <div class="chat">
                     <div class="img-chat">
-                        <img src="./img/user.png" alt="" class="img-xs img-round">
+                        <img src="../img/user.png" alt="" class="img-xs img-round">
                     </div>
                     <div class="dm">
                         <div class="username">
@@ -68,10 +107,11 @@
                 </div>
                 <?php }?>
             </div>
+
             <div id="menubar">
                 <a href="" id="btn1">
                     <div class="img-btn-menu">
-                        <img class="img-xs img-menu" src="./img/guardados.png" alt="">
+                        <img class="img-xs img-menu" src="../img/guardados.png" alt="">
                     </div>
                     <div class="lbl-btn-menu">
                         <p>GUARDADOS</p>
@@ -80,7 +120,7 @@
                 
                 <a href="" id="btn2">
                     <div class="img-btn-menu">
-                        <img class="img-Xs img-menu" src="./img/chats.png" alt="">
+                        <img class="img-Xs img-menu" src="../img/chats.png" alt="">
                     </div>
                     <div class="lbl-btn-menu">
                         <p>CHATS</p>
@@ -89,13 +129,15 @@
                 
                 <a href="" id="btn3">
                     <div class="img-btn-menu">
-                        <img class="img-Xs img-menu" src="./img/config.png" alt="">
+                        <img class="img-Xs img-menu" src="../img/config.png" alt="">
                     </div>
                     <div class="lbl-btn-menu">
                         <p>CONFIG</p>
                     </div>
                 </a>
             </div>
+
+
         </div>
 
         <div id="content">
@@ -109,7 +151,7 @@
 
                 <div id="img-user-chat">
                     <a href="#">
-                        <img src="./img/user.png" alt="" class="img-s img-round">
+                        <img src="../img/user.png" alt="" class="img-s img-round">
                     </a>
                 </div>
 
@@ -178,15 +220,19 @@
                 $('#sidepanel').toggleClass('active');
                 $('#content').toggleClass('active');
             });
-        });
-        $(document).ready(function () {
+
             $('#sidepanelCollapseOut').on('click', function () {
                 $('#sidepanel').toggleClass('active');
                 $('#content').toggleClass('active');
                 
             });
-        });
-        $(document).ready(function () {
+            $('#btn-menu-conexion').on('click', function () {
+                $('#menu-conexion').toggleClass('active');
+            });
+            // $('#btn-menu-conexion').on('focusout', function () {
+            //     $('#menu-conexion').removeClass('active');
+            // });
+
             if (screen.width <= 700){
                 $('.chat').on('click', function () {
                     $('#sidepanel').toggleClass('active');

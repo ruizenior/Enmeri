@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link hacia el archivo de estilos css -->
+    <link rel="stylesheet" href="../mycss/registroPacientes.css">
+    <link rel="stylesheet" href="../package/bootstrap-5.0.1-dist/css/bootstrap.min.css">
+
+    <link rel="icon" type="image/png" href="../img/ENMERI-icon.png">
+    <title>Registro Pacientes - ENMERI</title>
+
+</head>
+        
+<body>
+    <div id="contenedor">
+        <div id="central">
+            <div id="card">
+                <div class="titulo">
+                    <div class="img-title">
+                        <img class="img" src="../img/ENMERI-logologin.svg" alt="ENMERI">
+                    </div>
+                    <div class="text-titulo">
+                        <h2>Registro de Pacientes</h2>
+                    </div>
+                </div>
+
+                <form class="card-form">
+                    <div class="form-content">
+                        <div class="fila">
+                            <div class="columna-auto">
+                                <input type="text" class="input" name="nombre" placeholder="Nombre" required >
+                            </div>
+                            <div class="columna-auto">
+                                <input type="text" class="input" name= "apellidos" placeholder="Apellidos"required >
+                            </div>
+                        </div>
+
+                        <div class="fila">
+                            <div class="columna-auto">
+                                <input type="email" class="input" name= "correoel" placeholder="Correo electronico"required >
+                            </div>
+                            <div class="columna-auto">
+                                <input type="text" class="input" name="usuario" placeholder="Nombre de usuario"required >
+                            </div>
+                        </div>
+
+                        <div class="fila">
+                            <div class="columna-auto">
+                                <input type="password" class="input" name="password" placeholder="Contraseña" required>
+                            </div>
+                            <div class="columna-auto">
+                                <input type="checkbox" class="input-radio" name="politicas" required><p>Al registrarte aceptas nuestras politicas de privacidad y condiciones de uso</p>
+                            </div>
+                        </div>
+
+                        <button type="submit" title="registrar" name="registrar">Registrar</button>
+                    </div>
+                </form>
+
+                <div class="card-pie">
+                    <p>¿Ya tienes Cuenta? <a href="./login.html">Inicia sesion</a></p>
+                </div>
+            </div>
+
+            <div id="inferior">
+                <a href="./registro.html">Volver</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

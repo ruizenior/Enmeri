@@ -1,42 +1,57 @@
 body {
-    font-family: 'Overpass', sans-serif;
-    font-weight: normal;
-    font-size: 100%;    
-    margin: 0;
-    background-color: #2c3e50;
-}
+    margin: 0px;
+    padding: 0px;
 
+}
 #contenedor {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: indigo; */
-    
-    margin: 0;
-    padding: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    background-color: #2c3e50; 
+    background-image: url(../img/FondoOscuro.png);
+    /* background-color: indigo; */
+    /* padding-bottom: 80px; */
 }
-
 #central {
     width: 30%;
+    height: 80%;
     /* background-color: khaki; */
 }
+#tabs{
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    display: flex;
+    /* background-color: lightcoral; */
+}
+#tabs .tab{
+    width: 100px;
+    height: 100%;
+    background-color: #E6EAEA;
+    color: #2c3e50;
+    border-radius: 10px 10px 0px 0px;    
+    display: flex;
+    margin-right: 5px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+#tabs .tab.t2{
+    background-color: #7C9EBF;
+    color: #2c3e50;
+}
+#tabs .tab h6{
+    margin-top: 10px;
+    /* font-size: 15px; */
+}
 
-.titulo {
-    font-size: 250%;
-    color:#2c3e50;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.titulo img{
-    width: 260px; 
-    height: 250px;
-}
+
 
 #login {
     width: 100%;
-    padding: 50px 30px;
+    min-height: 95%;
     background-color: #E6EAEA;
     color: #2c3e50;
     
@@ -49,15 +64,138 @@ body {
     -webkit-border-radius: 10px;
     
     box-sizing: border-box;
+    padding: 5px;
+}
+#login2 {
+    width: 100%;
+    height: 95%;
+    background-color: #7C9EBF;
+    color: #E6EAEA;
+    
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    
+    box-sizing: border-box;
+    padding: 5px;
+}
+#login.active{
+    display: none;
+}
+#login2.active{
+    display: none;
 }
 
-#login input {
-    /* font-family: 'Overpass', sans-serif; */
+
+#login .titulo {
+    width: 100%;
+    /* height: 20%; */
+    /* background-color: darkcyan; */
+    padding: 20px;
+    text-align: center;
+}
+#login .titulo .img{
+    width: 60%;
+    height: 80%;
+    /* background-color: darkgreen; */
+}
+#login .titulo h2{
+    font-size: 40px;
+    /* background-color: blue; */
+    margin: 0px;
+    margin-top: 15px;
+
+}
+#login .login-form{
+    width: 100%;
+    padding: 20px 25px;
+    /* background-color: darkmagenta; */
+}
+#login .login-form input {
     font-size: 100%;
     color: #2c3e50;
-    /* background-color: lawngreen; */
-
+    display: block;
+    width: 100%;
+    height: 40px;
     
+    
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 10px;
+    
+    box-sizing: border-box;
+    
+    border: 1px #2c3e50 solid;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+#login .login-form button {
+    font-size: 110%;
+    color:#E6EAEA;
+    width: 100%;
+    height: 40px;
+    border: none;
+    
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-color: #7C9EBF;
+
+    margin-top: 10px;
+}
+#login .login-form button:hover {
+    background-color: #6586a7;
+    color:#E6EAEA;
+}
+#login .pie-form {
+    text-align: center; 
+    /* background-color: aquamarine;    */
+}
+#login .pie-form a {
+    text-decoration: none;
+    color: #2c3e50;
+    margin-bottom: 3px;
+    margin-left: 3px;
+}
+#login .pie-form a:hover {
+    color: #6586a7;
+}
+
+
+
+
+
+#login2 .titulo {
+    width: 100%;
+    height: 80%;
+    /* background-color: darkcyan; */
+    padding: 20px;
+    text-align: center;
+}
+#login2 .titulo .img{
+    width: 60%;
+    height: 80%;
+    /* background-color: darkgreen; */
+}
+#login2 .titulo h2{
+    font-size: 40px;
+    /* background-color: blue; */
+    margin: 0px;
+    margin-top: 15px;
+}
+#login2 .login-form{
+    width: 100%;
+    padding: 20px 25px;
+    /* background-color: darkmagenta; */
+}
+#login2 .login-form input {
+    font-size: 100%;
+    color: #2c3e50;
+    background-color: #E6EAEA;
     display: block;
     width: 100%;
     height: 40px;
@@ -72,17 +210,13 @@ body {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
 }
-
-#login input::placeholder {
-    font-family: 'Overpass', sans-serif;
-    color: #b1b1b1;
+#login2 .login-form input::placeholder {
+    color: #6586a7;
 }
-
-#login button {
-    /* width: 60; */
-    font-family: 'Overpass', sans-serif;
+#login2 .login-form button {
     font-size: 110%;
     color:#E6EAEA;
+    background-color: #2c3e50;
     width: 100%;
     height: 40px;
     border: none;
@@ -90,46 +224,36 @@ body {
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    background-color: #7C9EBF;
 
     margin-top: 10px;
 }
-
-#login button:hover {
-    background-color: #6586a7;
+#login2 .login-form button:hover {
+    background-color: #243444;
     color:#E6EAEA;
 }
-
-.pie-form {
-    font-size: 90%;
+#login2 .pie-form {
     text-align: center;    
-    margin-top: 15px;
 }
-
-.pie-form a {
-    display: block;
-    text-decoration: none;
-    color: #2c3e50;
-    margin-bottom: 3px;
-}
-
-.pie-form a:hover {
-    color: #6586a7;
-}
-
-.inferior {
-    margin-top: 10px;
-    font-size: 90%;
-    text-align: center;
-}
-
-.inferior a {
-    display: block;
+#login2 .pie-form a {
     text-decoration: none;
     color: #E6EAEA;
     margin-bottom: 3px;
+    margin-left: 3px;
+}
+#login2 .pie-form a:hover {
+    color: #2c3e50;
 }
 
-.inferior a:hover {
-    color: #6586a7;
+
+@media (max-width: 760px) {
+    #central {
+        width: 90%;
+    }
+    #tabs{
+        height: 25px;
+    }
+    #tabs .tab h6{
+        margin-top: 10px;
+        font-size: 15px;
+    }
 }

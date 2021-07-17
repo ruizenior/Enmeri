@@ -28,257 +28,341 @@
                 </div>
             </div>
         </div>
+
         <div id="body">
             <div id="wrap-body">
                 <form action="#">
-                <div id="content-tab1" class="">
-                    <div class="form-header">
-                        <h1>Datos personales</h1>
-                    </div>
-                    <div class="form-content">
-                        <div class="fila">
-                            <div class="columna-auto">
-                                <h5>Nombres: </h5>
-                                <input type="text" class="input" placeholder="Juan Carlos" required>
+                    <div id="content-tab1" class="">
+                        <div class="form-header">
+                            <h1>Datos personales</h1>
+                        </div>
+
+                        <div class="form-content">
+                            <div class="fila">
+                                <div class="columna-auto">
+                                    <h5>*Nombres: </h5>
+                                    <input type="text" class="input" placeholder="Juan Carlos" required>
+                                </div>
+                                <div class="columna-auto">
+                                    <h5>*Apellidos:</h5>
+                                    <input type="text" class="input" placeholder="Robles Valerio" required>
+                                </div>
                             </div>
-                            <div class="columna-auto">
-                                <h5>Apellidos:</h5>
-                                <input type="text" class="input" placeholder="Robles Valerio" required>
+                            <div class="fila">
+                                <div class="columna-auto">
+                                    <h5>*Sexo: </h5>
+                                    <select type="date" class="input" value="" required>
+                                        <option value="M">M</option>
+                                        <option value="F">F</option>
+                                    </select>
+                                </div>
+                                <div class="columna-auto">
+                                    <h5>*Fecha de nacimiento:</h5>
+                                    <input type="date" class="input" placeholder="Robles Valerio" required>
+                                </div>
+                            </div>
+                            <div class="fila">
+                                <div class="columna-auto">
+                                    <h5>*Celular:</h5>
+                                    <input type="text" class="input" placeholder="000 000 0000" required>
+                                </div>
+                                <div class="columna-auto">
+                                    <h5>Telefono: </h5>
+                                    <input type="text" class="input" placeholder="000 000 0000" >
+                                </div>
+                            </div>
+                            <div class="fila">
+                                <div class="columna-25">
+                                    <h5>*Dirección: </h5>
+                                </div>
+                                <div class="columna-auto flex">
+                                    <input type="text" class="input minput" name="direccion" placeholder="calle, sector" maxlength="100" required>
+                                    <input type="text" class="input minput" name="ciudad" placeholder="ciudad" maxlength="100" required>
+                                    <input type="text" class="input minput" name="pais" placeholder="pais" maxlength="100" required>
+                                </div>
                             </div>
                         </div>
-                        <div class="fila">
-                            <div class="columna-auto">
-                                <h5>Sexo: </h5>
-                                <select type="date" class="input" value="" required>
-                                    <option value="M">M</option>
-                                    <option value="F">F</option>
-                                </select>
-                            </div>
-                            <div class="columna-auto">
-                                <h5>Fecha de nacimiento:</h5>
-                                <input type="date" class="input" placeholder="Robles Valerio" required>
-                            </div>
-                        </div>
-                        <div class="fila">
-                            <div class="columna-auto">
-                                <h5>Telefono: </h5>
-                                <input type="text" class="input" placeholder="000 000 0000" >
-                            </div>
-                            <div class="columna-auto">
-                                <h5>Celular:</h5>
-                                <input type="text" class="input" placeholder="000 000 0000" required>
-                            </div>
-                        </div>
-                        <div class="fila">
-                            <div class="columna-25">
-                                <h5>Dirección: </h5>
-                            </div>
-                            <div class="columna-auto flex">
-                                <input type="text" class="input minput" name="direccion" placeholder="calle, sector" maxlength="100" required>
-                                <input type="text" class="input minput" name="ciudad" placeholder="ciudad" maxlength="100" required>
-                                <input type="text" class="input minput" name="pais" placeholder="pais" maxlength="100" required>
-                            </div>
+
+                        <div class="form-footer">
+                            <button type="button" class="btn-blue" id="next-1">
+                                <p>Siguiente</p>
+                            </button>
                         </div>
                     </div>
-                    <div class="form-footer">
-                        <button type="button" class="btn-blue" id="next-1">
-                            <p>Siguiente</p>
-                        </button>
-                    </div>
-                </div>
-                <div id="content-tab2" class="active">
-                    <div class="form-header">
-                        <h1>Antecedentes médicos</h1>
-                    </div>
-                    <div class="form-content">
-                        <div class="content-table">
-                            <table class="preguntas">
-                                <tr>
-                                    <th ></th>
-                                    <th class="bgc-bluedark corner-tl">Si</th>
-                                    <th class="bgc-bluedark">No</th>
-                                    <th class="bgc-bluedark corner-tr">No sabe</th>
-                                </tr>
-                                <tr>
-                                    <td class="bgc-bluedark td-focus corner-tl">Dolores de cabeza, convulsiones, mareos, parálisis</td>
-                                    <td>
-                                        <input type="radio" id="pregunta1-si" name="pregunta1" value="si" required>
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta1-no" name="pregunta1"  value="no" required>
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta1-nosabe" name="pregunta1"  value="nosabe" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="bgc-bluedark td-focus ">Anemia, desórdenes sanguíneos o problemas de coagulación</td>
-                                    <td>
-                                        <input type="radio" id="pregunta2-si" name="pregunta2" value="si">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta2-no" name="pregunta2"  value="no">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta2-nosabe" name="pregunta2"  value="nosabe" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="bgc-bluedark td-focus ">Ulcera, gastritis, cirrosis, colitis, hemorroides</td>
-                                    <td>
-                                        <input type="radio" id="pregunta3-si" name="pregunta3" value="si">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta3-no" name="pregunta3"  value="no">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta3-nosabe" name="pregunta3"  value="nosabe" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="bgc-bluedark td-focus ">Asma, enfisema, afección laríngea o en bronquios</td>
-                                    <td>
-                                        <input type="radio" id="pregunta4-si" name="pregunta4" value="si">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta4-no" name="pregunta4"  value="no">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta4-nosabe" name="pregunta4"  value="nosabe" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="bgc-bluedark td-focus ">Diabetes</td>
-                                    <td>
-                                        <input type="radio" id="pregunta5-si" name="pregunta5" value="si">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta5-no" name="pregunta5"  value="no">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta5-nosabe" name="pregunta5"  value="nosabe" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="bgc-bluedark td-focus ">Enfermedades de la tiroides, alteraciones de las grasas o ácidos úrico sanguíneos</td>
-                                    <td>
-                                        <input type="radio" id="pregunta6-si" name="pregunta6" value="si">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta6-no" name="pregunta6"  value="no">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta6-nosabe" name="pregunta6"  value="nosabe" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="bgc-bluedark td-focus ">Cirugías, traumas o accidentes</td>
-                                    <td>
-                                        <input type="radio" id="pregunta7-si" name="pregunta7" value="si">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta7-no" name="pregunta7"  value="no">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta7-nosabe" name="pregunta7"  value="nosabe" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="bgc-bluedark td-focus ">Cáncer, tumores, radioterapia o quimioterapia</td>
-                                    <td>
-                                        <input type="radio" id="pregunta8-si" name="pregunta8" value="si">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta8-no" name="pregunta8"  value="no">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta8-nosabe" name="pregunta8"  value="nosabe" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="bgc-bluedark td-focus ">Hipertensión, infartos, anginas, soplos, arritmias, enfermedad coronaria</td>
-                                    <td>
-                                        <input type="radio" id="pregunta9-si" name="pregunta9" value="si">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta9-no" name="pregunta9"  value="no">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta9-nosabe" name="pregunta9"  value="nosabe" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="bgc-bluedark td-focus ">Infecciosos: <br> Hepatitis, tuberculosis, SIDA o HIV (+), enfermedades de transmisión sexual</td>
-                                    <td>
-                                        <input type="radio" id="pregunta10-si" name="pregunta10" value="si">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta10-no" name="pregunta10"  value="no">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta10-nosabe" name="pregunta10"  value="nosabe" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="bgc-bluedark td-focus corner-bl">Infecciones de la piel</td>
-                                    <td>
-                                        <input type="radio" id="pregunta11-si" name="pregunta11" value="si">
-                                    </td>
-                                    <td>
-                                        <input type="radio" id="pregunta11-no" name="pregunta11"  value="no">
-                                    </td>
-                                    <td class="corner-br">
-                                        <input type="radio" id="pregunta11-nosabe" name="pregunta11"  value="nosabe" required>
-                                    </td>
-                                </tr>
-                            </table>
+
+                    <div id="content-tab2" class="active">
+                        <div class="form-header">
+                            <h1>Antecedentes médicos</h1>
                         </div>
-                    </div>
-                    <div class="form-footer">
-                        <button type="button" class="btn-blue" id="next-2">
-                            <p>Siguiente</p>
-                        </button>
-                    </div>
-                    
-                </div>
-                <div id="content-tab3" class="active">
-                    <div class="form-header">
-                        <h1>Antecedentes médicos</h1>
-                    </div>
-                    <div class="form-content">
-                        <div class="fila">
-                            <div class="columna-auto">
-                                <h5>Nombres: </h5>
-                                <input type="text" class="input" placeholder="Juan Carlos">
-                            </div>
-                            <div class="columna-auto">
-                                <h5>Apellidos:</h5>
-                                <input type="text" class="input" placeholder="Robles Valerio">
+
+                        <div class="form-content">
+                            <div class="content-table">
+                                <table class="preguntas">
+                                    <tr>
+                                        <th ></th>
+                                        <th class="bgc-bluedark corner-tl">Si</th>
+                                        <th class="bgc-bluedark">No</th>
+                                        <th class="bgc-bluedark corner-tr">No sabe</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="bgc-bluedark td-focus corner-tl">*Dolores de cabeza, convulsiones, mareos, parálisis</td>
+                                        <td>
+                                            <input type="radio" id="pregunta1-si" name="pregunta1" value="si" required>
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta1-no" name="pregunta1"  value="no" required>
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta1-nosabe" name="pregunta1"  value="nosabe" required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bgc-bluedark td-focus ">*Anemia, desórdenes sanguíneos o problemas de coagulación</td>
+                                        <td>
+                                            <input type="radio" id="pregunta2-si" name="pregunta2" value="si">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta2-no" name="pregunta2"  value="no">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta2-nosabe" name="pregunta2"  value="nosabe" required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bgc-bluedark td-focus ">*Ulcera, gastritis, cirrosis, colitis, hemorroides</td>
+                                        <td>
+                                            <input type="radio" id="pregunta3-si" name="pregunta3" value="si">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta3-no" name="pregunta3"  value="no">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta3-nosabe" name="pregunta3"  value="nosabe" required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bgc-bluedark td-focus ">*Asma, enfisema, afección laríngea o en bronquios</td>
+                                        <td>
+                                            <input type="radio" id="pregunta4-si" name="pregunta4" value="si">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta4-no" name="pregunta4"  value="no">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta4-nosabe" name="pregunta4"  value="nosabe" required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bgc-bluedark td-focus ">*Diabetes</td>
+                                        <td>
+                                            <input type="radio" id="pregunta5-si" name="pregunta5" value="si">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta5-no" name="pregunta5"  value="no">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta5-nosabe" name="pregunta5"  value="nosabe" required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bgc-bluedark td-focus ">*Enfermedades de la tiroides, alteraciones de las grasas o ácidos úrico sanguíneos</td>
+                                        <td>
+                                            <input type="radio" id="pregunta6-si" name="pregunta6" value="si">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta6-no" name="pregunta6"  value="no">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta6-nosabe" name="pregunta6"  value="nosabe" required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bgc-bluedark td-focus ">*Cirugías, traumas o accidentes</td>
+                                        <td>
+                                            <input type="radio" id="pregunta7-si" name="pregunta7" value="si">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta7-no" name="pregunta7"  value="no">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta7-nosabe" name="pregunta7"  value="nosabe" required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bgc-bluedark td-focus ">*Cáncer, tumores, radioterapia o quimioterapia</td>
+                                        <td>
+                                            <input type="radio" id="pregunta8-si" name="pregunta8" value="si">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta8-no" name="pregunta8"  value="no">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta8-nosabe" name="pregunta8"  value="nosabe" required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bgc-bluedark td-focus ">*Hipertensión, infartos, anginas, soplos, arritmias, enfermedad coronaria</td>
+                                        <td>
+                                            <input type="radio" id="pregunta9-si" name="pregunta9" value="si">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta9-no" name="pregunta9"  value="no">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta9-nosabe" name="pregunta9"  value="nosabe" required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bgc-bluedark td-focus ">*Infecciosos: <br> Hepatitis, tuberculosis, SIDA o HIV (+), enfermedades de transmisión sexual</td>
+                                        <td>
+                                            <input type="radio" id="pregunta10-si" name="pregunta10" value="si">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta10-no" name="pregunta10"  value="no">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta10-nosabe" name="pregunta10"  value="nosabe" required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bgc-bluedark td-focus corner-bl">*Infecciones de la piel</td>
+                                        <td>
+                                            <input type="radio" id="pregunta11-si" name="pregunta11" value="si">
+                                        </td>
+                                        <td>
+                                            <input type="radio" id="pregunta11-no" name="pregunta11"  value="no">
+                                        </td>
+                                        <td class="corner-br">
+                                            <input type="radio" id="pregunta11-nosabe" name="pregunta11"  value="nosabe" required>
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
-                        <div class="fila">
-                            <div class="columna-auto">
-                                <h5>Sexo: </h5>
-                                <select type="date" class="input" value="" >
-                                    <option value="M">M</option>
-                                    <option value="F">F</option>
-                                </select>
-                            </div>
-                            <div class="columna-auto">
-                                <h5>Fecha de nacimiento:</h5>
-                                <input type="date" class="input" placeholder="Robles Valerio">
-                            </div>
+
+                        <div class="form-footer">
+                            <button type="button" class="btn-blue" id="next-2">
+                                <p>Siguiente</p>
+                            </button>
                         </div>
                     </div>
-                    <div class="form-footer">
-                        <button type="submit" class="btn-blue" id="next-2">
-                            <p>Enviar</p>
-                        </button>
-                        <a href="#" class="btn-light" id="next-2">
-                            <p>Descartar</p>
-                        </a>
+
+                    <div id="content-tab3" class="active">
+                        <div class="form-header">
+                            <h1>Antecedentes médicos</h1>
+                        </div>
+
+                        <div class="form-content">
+                            <div class="fila">
+                                <div class="columna-auto marb-25">
+                                    <div class="columna-70">
+                                        <h4>¿Tiene alguna discapacidad?</h4>
+                                    </div>
+                                    <div class="columna-auto">
+                                        <p>Si</p>
+                                        <input type="radio" class="radio" name="discapacidad" value="S" required>
+                                    </div>
+                                    <div class="columna-auto">
+                                        <p>No</p>
+                                        <input type="radio" class="radio" name="discapacidad" value="N" required>
+                                    </div>
+                                </div>
+                                <div class="columna-auto">
+                                    <textarea class="textarea" name="descrDiscapacidades" placeholder="cuales discapacidades tiene?"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="fila">
+                                <div class="columna-auto marb-25">
+                                    <div class="columna-70">
+                                        <h4>¿Toma algun medicamento?</h4>
+                                    </div>
+                                    <div class="columna-auto">
+                                        <p>Si</p>
+                                        <input type="radio" class="radio" name="medicamento" value="S" required>
+                                    </div>
+                                    <div class="columna-auto">
+                                        <p>No</p>
+                                        <input type="radio" class="radio" name="medicamento" value="N" required>
+                                    </div>
+                                </div>
+                                <div class="columna-auto">
+                                    <textarea class="textarea" name="descrMedicamentos" placeholder="cuales medicamentos consume?"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="fila">
+                                <div class="columna-auto marb-25">
+                                    <div class="columna-70">
+                                        <h4>¿Es alergico a algo?</h4>
+                                    </div>
+                                    <div class="columna-auto">
+                                        <p>Si</p>
+                                        <input type="radio" class="radio" name="alergia" value="S" required>
+                                    </div>
+                                    <div class="columna-auto">
+                                        <p>No</p>
+                                        <input type="radio" class="radio" name="alergia" value="N" required>
+                                    </div>
+                                </div>
+                                <div class="columna-auto">
+                                    <textarea class="textarea" name="descralergias" placeholder="cuales son sus alergias?"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="fila">
+                                <div class="columna-auto marb-25">
+                                    <div class="columna-70">
+                                        <h4>¿Fuma?</h4>
+                                    </div>
+                                    <div class="columna-auto">
+                                        <p>Si</p>
+                                        <input type="radio" class="radio" name="fuma" value="S" required>
+                                    </div>
+                                    <div class="columna-auto">
+                                        <p>No</p>
+                                        <input type="radio" class="radio" name="fuma" value="N" required>
+                                    </div>
+                                </div>
+                                <div class="columna-auto marb-25">
+                                    <div class="columna-70">
+                                        <h4>¿Consume alcohol?</h4>
+                                    </div>
+                                    <div class="columna-auto">
+                                        <p>Si</p>
+                                        <input type="radio" class="radio" name="bebe" value="S" required>
+                                    </div>
+                                    <div class="columna-auto">
+                                        <p>No</p>
+                                        <input type="radio" class="radio" name="bebe" value="N" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="fila">
+                                <div class="columna-auto marb-25">
+                                    <div class="columna-70">
+                                        <h4>Comentarios sobre su estado de salud.</h4>
+                                    </div>
+
+                                </div>
+                                <div class="columna-auto">
+                                    <textarea class="textarea" name="descralergias" placeholder="Cualquier caracteristica que considere necesaria mencionar"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-footer">
+                            <button type="submit" class="btn-blue" id="next-2">
+                                <p>Enviar</p>
+                            </button>
+                            <a href="#" class="btn-light" id="next-2">
+                                <p>Descartar</p>
+                            </a>
+                        </div>
+
                     </div>
-                </div>
                 </form>
             </div>
         </div>

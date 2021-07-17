@@ -35,7 +35,7 @@ body{
 #sidepanel #profile {
     width: 100%; 
     height: 55px;
-    /* background: lightskyblue; */
+    /* background: #7C9EBF; */
     /* border-bottom: 1px solid rgb(32, 43, 56); */
     padding: 5px;
     display: flex;
@@ -72,6 +72,69 @@ body{
     align-items: center;
     
 }
+#sidepanel #profile #icon-down:focus{
+    background-color: #E6EAEA;
+    
+}
+#sidepanel #profile #icon-down:focus{
+    background-color: #E6EAEA;
+    
+}
+
+
+
+
+ul{
+    list-style:none;
+}
+ul a{
+    text-decoration: none;
+    color: #E6EAEA;
+}
+ul a:hover{
+    text-decoration: none;
+}
+
+#menu-conexion{
+    min-height: 10px;
+    width: 200px;
+    display: none;
+    position: fixed; /*Fixed ya que queremos que la posición sea en relación al navegador*/
+    top: 55; /*El valor 0 indica que va a quedar arriba de todo*/
+    right: 71%; /*Para que el menu se ubique siempre en la parte izquierda de la pantalla*/
+
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
+    background-color: #7C9EBF;
+    padding: 10px 5px;
+    /* justify-content: left; */
+}
+#menu-conexion.active{
+    display: block;
+}
+#menu-conexion ul{
+    width: 100%;
+    min-height: 20px;
+    padding: 0px;
+    margin: 0px;
+    /* background-color: #4c6177; */
+}
+#menu-conexion ul li{
+    width: 100%;
+    min-height: 100%;
+    padding: 10px;
+    /* background-color: #4c6177; */
+    border-bottom: 1px rgba(0, 0, 0, 0.185) solid;
+}
+#menu-conexion ul li:hover{
+    background-color: rgba(0, 0, 0, 0.185);
+}
+#menu-conexion ul li.botton{
+    border-bottom: 0px;
+    border-top: 2px  rgba(0, 0, 0, 0.185) solid;
+}
 
 
 
@@ -82,7 +145,7 @@ body{
     padding-top: 3px;
     padding-bottom: 3px ;
     border-bottom: 1px rgb(32, 43, 56) solid;
-    /* background-color: rgb(99, 76, 40); */
+    /* background-color: #7C9EBF; */
     display: flex;
     align-items: stretch;
 }
@@ -104,8 +167,11 @@ body{
     border-radius: 25px;
     padding-left: 15px;
     border: none;
-    background-color: #4c6177;
-    color: white;
+    background-color: #213141;
+    color: #c8d8e7;
+}
+#sidepanel #search #s-input #txt-search::placeholder{
+    color: #c8d8e7;
 }
 #sidepanel #search #s-btn{
     width: 15%;
@@ -254,6 +320,7 @@ body{
     min-width: 70%;
     min-height: 100vh;
     background-color:#E6EAEA;
+    
 }
 #content.active{
     display: block;
@@ -322,7 +389,8 @@ body{
 #content #content-chat{
     width: 100%;
     height: calc(100vh - 80px - 60px);
-    /* background-color: darkgreen; */
+    /* background-color: #89ffbe; */
+    background-image: url(../img/FondoClaro.png);
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -519,10 +587,18 @@ body{
         min-width: 0px;
         max-width: 0px;
     }
+    #menu-conexion{
+        left: 95%; /* X */
+        top: 100px; /* Y */
+        /* bottom: 55px;  */
+        transform: translate(-100%, -50%); /* Reposicionar X,Y */
+    }
     #content.active{
         display: block;
         min-width: 100%;
         max-width: 100%;
     }
-
+    #content #content-chat{
+        padding: 0px 10px;
+    }
 }
