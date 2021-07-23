@@ -1,4 +1,8 @@
 <?php
+// //seteo la vida de la session en 7200 segundos    
+// ini_set("session.cookie_lifetime","14400");
+// //seteo el maximo tiempo de vida de la seession
+// ini_set("session.gc_maxlifetime","14400");
 @session_start(); 
 
 function validarLoginPacientes($link, $user, $pass)
