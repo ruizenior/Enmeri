@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         validarLoginPacientes($link,$vUsuario,$vClave);
     }
     else if($vTipoUsuario == 'M'){
-        // validarLoginPacientes($link,$vUsuario,$vClave);
+        validarLoginMedicos($link,$vUsuario,$vClave);
     }
     else{
         echo('intento de violacion al sistema');
@@ -71,6 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                     <p>¿No tienes Cuenta?  <a href="./registro.html"> Registrate</a></p>
                 </div>
             </div>
+
             <div id="login2" class="active">
                 <div class="titulo">
                     <img class="img" src="../img/ENMERI-logologin.svg" alt="ENMERI" >

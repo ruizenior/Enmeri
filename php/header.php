@@ -7,7 +7,8 @@
         # code...
         // echo "<br> bienvenido " . $_SESSION['userid'];
         $vUsuario= $_SESSION['userid'];
-        $row = consultarUsuario($link,$vUsuario);
+        $userTipe= $_SESSION['userTipe'];
+        $row = consultarUsuario($link,$vUsuario,$userTipe);
     } else {
         # code...
         // echo "<br> no existe session";

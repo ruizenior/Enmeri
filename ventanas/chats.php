@@ -87,25 +87,30 @@
 
             <div id="chats">
                 <?php
-                    for ($x=0;$x<4;$x++){
-                ?>
-                <div class="chat">
-                    <div class="img-chat">
-                        <img src="../img/user.png" alt="" class="img-xs img-round">
-                    </div>
-                    <div class="dm">
-                        <div class="username">
-                            <h6>
-                                Nombre de usuario
-                            </h6>
-                        </div>
-                        <div class="last-dm">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ab quisquam quos!</p>
-                        </div>
-                    </div>
-                    <div class="date">12:55</div>
-                </div>
-                <?php }?>
+                    if ($_SESSION['userTipe']=='paciente'){
+                        $usersChats = listChats($link,$_SESSION['userid']);
+                        while ($chat = mysqli_fetch_array($usersChats, MYSQLI_ASSOC)) {
+                            $lastDM= ultimoMensaje($link,$chat['id_chat']); 
+                            $destinatario= consultarUsuario($link,$chat['id_medico'],'medico');     ?>
+                            <a class="chat" href="../ventanas/chats.php?chat=<?php echo $chat['id_chat']?>">
+                                <div class="img-chat">
+                                    <img src="../img/user.png" alt="" class="img-xs img-round">
+                                </div>
+                                <div class="dm">
+                                    <div class="username">
+                                        <h6>
+                                            <?php echo $destinatario['nombres'] ?>
+                                        </h6>
+                                    </div>
+                                    <div class="last-dm">
+                                        <p><?php echo(substr($lastDM['mensaje'], 0, 26  ) . '...
+                                        ');?></p>
+                                        <!-- // Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere modi iure aspernatur sint ea! Rem dolore eligendi perspiciatis iusto doloremque. Culpa qui nesciunt atque quibusdam cumque aliquam deserunt sint ea officia nam, placeat omnis accusamus quae voluptas, distinctio possimus? Soluta labore quisquam reprehenderit ad molestiae suscipit impedit enim maxime alias! -->
+                                    </div>
+                                </div>
+                                <div class="date"><?php  $date = date_create($lastDM['fecha_registro']); echo date_format($date, 'H:i')?></div>
+                            </a>
+                <?php }}?>
             </div>
 
             <div id="menubar">
@@ -141,6 +146,12 @@
         </div>
 
         <div id="content">
+            <!-- <?php 
+                if (!empty($_GET['chat'])) {
+                    $idchat = $_GET['chat'];
+                    $contentChat = consultarChat($link,$idchat);
+                
+            ?>
             <div id="header-chat">
                 <div id="btn-back">
                     <button type="button" id="sidepanelCollapseOut" class="own-btn own-btn-light">
@@ -156,12 +167,22 @@
                 </div>
 
                 <div id="username-chat">
-                    <h5>Nombre de usuario</h5>
+                    <h5><?php 
+                        if ($contentChat['id_paciente']==$_SESSION['userid'] and $_SESSION['userTipe']== 'paciente'){
+                            $destinatarioContent = consultarUsuario($link,$contentChat['id_medico'],'medico');
+                            echo ($destinatarioContent['nombres']);
+                        }
+                        elseif ($contentChat['id_paciente']!=$_SESSION['userid'] and $_SESSION['userTipe']== 'medico'){
+                            $destinatarioContent = consultarUsuario($link,$contentChat['id_paciente'],'paciente');
+                            echo ($destinatarioContent['nombres']);
+                        }
+                    }
+                    ?></h5>
                 </div>
 
                 <a href="#" id="btn-options">
                     <i class="fas fa-bars"></i>
-                </a>
+                </a> -->
             </div>
 
             <div id="content-chat">
@@ -184,16 +205,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="dm-received">
-                    <div class="wrap-dm ">
-                        <div class="txt-dm">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut cumque a quis beatae atque odio alias sit pariatur molestias? Hic autem quos vero rerum perferendis officia ullam modi illo corporis.</p>
-                        </div>
-                        <div class="date-dm">
-                            <p>19:31</p>
-                        </div>
-                    </div>
-                </div> -->
             </div>
 
             <div  id="sendbar-chat">
@@ -242,64 +253,30 @@
         });
     </script>
     
-	<!-- <script >
-		$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+	<script >
+		// function newMessage() {
+		// 	message = $(".message-input input").val();
+		// 	if($.trim(message) == '') {
+		// 		return false;
+		// 	}
+		// 	$('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
+		// 	$('.message-input input').val(null);
+		// 	$('.contact.active .preview').html('<span>You: </span>' + message);
+		// 	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+		// };
 
-		$("#profile-img").click(function() {
-			$("#status-options").toggleClass("active");
-		});
+		// $('.submit').click(function() {
+		// newMessage();
+		// });
 
-		$(".expand-button").click(function() {
-		$("#profile").toggleClass("expanded");
-			$("#contacts").toggleClass("expanded");
-		});
-
-		$("#status-options ul li").click(function() {
-			$("#profile-img").removeClass();
-			$("#status-online").removeClass("active");
-			$("#status-away").removeClass("active");
-			$("#status-busy").removeClass("active");
-			$("#status-offline").removeClass("active");
-			$(this).addClass("active");
-			
-			if($("#status-online").hasClass("active")) {
-				$("#profile-img").addClass("online");
-			} else if ($("#status-away").hasClass("active")) {
-				$("#profile-img").addClass("away");
-			} else if ($("#status-busy").hasClass("active")) {
-				$("#profile-img").addClass("busy");
-			} else if ($("#status-offline").hasClass("active")) {
-				$("#profile-img").addClass("offline");
-			} else {
-				$("#profile-img").removeClass();
-			};
-			
-			$("#status-options").removeClass("active");
-		});
-
-		function newMessage() {
-			message = $(".message-input input").val();
-			if($.trim(message) == '') {
-				return false;
-			}
-			$('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
-			$('.message-input input').val(null);
-			$('.contact.active .preview').html('<span>You: </span>' + message);
-			$(".messages").animate({ scrollTop: $(document).height() }, "fast");
-		};
-
-		$('.submit').click(function() {
-		newMessage();
-		});
-
-		$(window).on('keydown', function(e) {
-		if (e.which == 13) {
-			newMessage();
-			return false;
-		}
-		});
+		// $(window).on('keydown', function(e) {
+		// if (e.which == 13) {
+		// 	newMessage();
+		// 	return false;
+		// }
+		// });
 		//# sourceURL=pen.js
-	</script> -->
+	</script>
 
 </body>
 </html>

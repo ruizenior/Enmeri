@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link hacia el archivo de estilos css -->
+    <link rel="stylesheet" href="../mycss/registroMedicos.css">
+    <link rel="stylesheet" href="../package/bootstrap-5.0.1-dist/css/bootstrap.min.css">
+
+    <link rel="icon" type="image/png" href="../img/ENMERI-icon.png">
+    <title>Registro Medicos - ENMERI</title>
+
+</head>
+        
+<body>
+    <div id="contenedor">
+        <div id="central">
+            <div id="card">
+                <div class="titulo">
+                    <div class="img-title">
+                        <img class="img" src="../img/ENMERI-logologin.svg" alt="ENMERI">
+                    </div>
+                    <div class="text-titulo">
+                        <h2>Registro de Medicos</h2>
+                    </div>
+                </div>
+
+                <form class="card-form">
+                    <div class="form-content">
+                        <div class="fila">
+                            <div class="columna-auto p">
+                                <div class="columna-40">
+                                    <h4>Nombre:</h4>
+                                </div>
+                                <div class="columna-auto">
+                                    <input type="text" class="input" name="nombre" placeholder="Nombre" required >
+                                </div>
+                            </div>
+                            <div class="columna-auto p">
+                                <div class="columna-40">
+                                    <h4>Apellidos:</h4>
+                                </div>
+                                <div class="columna-auto">
+                                    <input type="text" class="input" name= "apellidos" placeholder="Apellidos"required >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fila">
+                            <div class="columna-auto p">
+                                <div class="columna-40">
+                                    <h4>Correo electronico:</h4>
+                                </div>
+                                <div class="columna-auto">
+                                    <input type="email" class="input" name= "correoel" placeholder="Correo electronico"required >
+                                </div>
+                            </div>
+                            <div class="columna-auto p">
+                                <div class="columna-40">
+                                    <h4>Nombre de usuario:</h4>
+                                </div>
+                                <div class="columna-auto">
+                                    <input type="text" class="input" name="usuario" placeholder="Nombre de usuario"required >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fila">
+                            <div class="columna-auto p">
+                                <div class="columna-40">
+                                    <h4>Conreaseña:</h4>
+                                </div>
+                                <div class="columna-auto">
+                                    <input type="password" class="input" name="password" placeholder="Contraseña" required>
+                                </div>
+                            </div>
+
+                            <div class="columna-auto p">
+                                <div class="columna-40">
+                                    <h4>Fecha de nacimiento:</h4>
+                                </div>
+                                <div class="columna-auto">
+                                    <input type="date" class="input" name="fechaNacimiento" placeholder="Fecha de nacimiento" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fila">
+                            <div class="columna-auto p">
+                                <div class="columna-40">
+                                    <h4>Sexo:</h4>
+                                </div>
+                                <div class="columna-auto">
+                                    <input type="email" class="input" name= "correoel" placeholder="Correo electronico"required >
+                                </div>
+                            </div>
+                            <div class="columna-auto p">
+                                <div class="columna-40">
+                                    <h4>Celular:</h4>
+                                </div>
+                                <div class="columna-auto">
+                                    <input type="text" class="input" name="usuario" placeholder="Nombre de usuario"required >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fila">
+                            <div class="columna-auto p">
+                                <div class="columna-40">
+                                    <h4>Apellidos:</h4>
+                                </div>
+                                <div class="columna-auto">
+                                    <input type="email" class="input" name= "correoel" placeholder="Correo electronico"required >
+                                </div>
+                            </div>
+                            <div class="columna-auto p">
+                                <div class="columna-40">
+                                    <h4>Apellidos:</h4>
+                                </div>
+                                <div class="columna-auto">
+                                    <input type="text" class="input" name="usuario" placeholder="Nombre de usuario"required >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fila">
+                            <div class="columna-auto p">
+                                <div class="columna-auto">
+                                    <h4>País:</h4>
+                                    <select class="input" name="pais" value="" required>
+                                        <option value="">Selecciona tu pais</option>
+                                        <option value="1">Republica dominicana</option>
+                                        <option value="2">Prueba</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="columna-auto p">
+                                <div class="columna-auto">
+                                    <h4>Ciudad:</h4>
+                                    <select class="input" name="pais" value="" required>
+                                        <option value="">Selecciona tu ciudad</option>
+                                        <option value="1">La Vega</option>
+                                        <option value="2">Prueba</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="columna-auto p">
+                                
+                                <div class="columna-auto">
+                                    <h4>Sector:</h4>
+                                    <input type="text" class="input" name="usuario" placeholder="Nombre de usuario"required >
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" title="registrar" name="registrar">Registrar</button>
+                    </div>
+                </form>
+
+                <div class="card-pie">
+                    <p>¿Ya tienes Cuenta? <a href="../ventanas/login.php">Inicia sesion</a></p>
+                </div>
+            </div>
+
+            <div id="inferior">
+                <a href="./registro.html">Volver</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
